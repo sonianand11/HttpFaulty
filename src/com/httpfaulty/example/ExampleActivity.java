@@ -11,6 +11,8 @@ import android.os.Handler;
 
 public class ExampleActivity extends Activity {
 	
+	//writing a code in hanler which will execute when execption occures.
+	
 	Handler handler = new Handler() {
 
 		public void handleMessage(android.os.Message msg) {
@@ -82,6 +84,8 @@ public class ExampleActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		//creating the HttpFaulty object : new HttpFaulty(url,method,header,hanlerObject,retry,retryInterval)
+		
 		HttpFaulty fault = new HttpFaulty("http://google.com", "get", null, handler,
 				0, 0);
 	}
